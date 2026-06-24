@@ -12,37 +12,11 @@ import {
   Typography,
   Box,
   TablePagination,
-  Container,
 } from "@mui/material";
 
 import Image from "next/image";
 import { useCoinData } from "@/hooks/useCoinData";
-import CoinBox from "../../common/CoinBox/CoinBox";
-
-function StatBox({ coin, label }) {
-  return (
-    <Box className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-6">
-      <Typography className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-1">{label}</Typography>
-      <Typography className="text-white text-lg md:text-2xl font-bold">
-        ${coin?.current_price?.toLocaleString() ?? "—"}
-      </Typography>
-      {coin?.price_change_percentage_24h != null && (
-        <Typography
-          className={`text-sm md:text-base font-semibold ${
-            coin.price_change_percentage_24h > 0 ? "text-green-400" : "text-red-400"
-          }`}
-        >
-          {coin.price_change_percentage_24h > 0 ? "+" : ""}
-          {coin.price_change_percentage_24h.toFixed(2)}%
-        </Typography>
-      )}
-    </Box>
-  );
-}
-
-
-
-
+import StatBox from "../../common/StatBox/StatBox";
 
 function CryptoTable() {
 
@@ -154,6 +128,8 @@ function CryptoTable() {
                       )}
                     </TableBody>
                   </Table>
+
+                  
                   <TablePagination
                     rowsPerPageOptions={[5, 10, 25]}
                     component="div"

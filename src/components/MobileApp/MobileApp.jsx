@@ -52,10 +52,10 @@ function MobileApp() {
                 Mobile Experience
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
-                Plan your travels from anywhere with our mobile app
+                Manage your wallet from anywhare you want
               </h2>
               <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl">
-                Get full access to offline routing, real-time safety tracking, and instant shelter booking. Take the best guide for your outdoor journeys.
+                Get full access to offline routing, real-time safety acees to your crypto. Take the best .
               </p>
 
               {/* CARDS BOX */}

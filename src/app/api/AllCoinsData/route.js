@@ -12,7 +12,7 @@ export async function GET (){
             {
                 next: {
                     revalidate: 60,
-                    cache: 'no-store',
+                   
                 
                 }
             }
