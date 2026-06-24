@@ -34,7 +34,7 @@ const cards = [
 
 function MobileApp() {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-gray-950 relative overflow-hidden">
       {/* Decorative background glows */}
       <div className="absolute top-1/4 left-10 w-72 h-72 bg-sky-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
@@ -47,6 +47,7 @@ function MobileApp() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             {/* TEXT BOX & FEATURES */}
             <div className="lg:col-span-7 flex flex-col justify-center">
+              {/* SUBTITLE */}
               <span className="self-start inline-block text-xs font-semibold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-full px-4 py-1.5 mb-6">
                 Mobile Experience
               </span>

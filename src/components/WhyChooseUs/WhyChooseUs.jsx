@@ -71,14 +71,22 @@ const WhyChooseUs = () => {
   return (
     <section id="Choose Us" className="py-16 md:py-24 px-0 bg-gray-950">
       <Container>
+
+      {/* TEXT_BOX */}
+      <div>
+           <span className=" inline-block text-xs font-semibold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 rounded-full px-4 py-1.5 mb-6">
+              Why choose us
+          </span>
         <Typography
           variant="h2"
           component="h3"
-          align="center"
+          
           className="font-black text-white mb-12 md:mb-16 uppercase tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Choose Us</span>
+       
+          Discover<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"> our features</span>
         </Typography>
+      </div>
 
         <Box className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16 items-center">
           {/* Left Column */}

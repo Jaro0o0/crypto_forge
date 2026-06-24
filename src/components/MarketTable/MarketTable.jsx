@@ -14,25 +14,14 @@ import {
   TablePagination,
   Container,
 } from "@mui/material";
-import { getData } from "@/utils/getData";
-import CoinBox from "../CoinBox/CoinBox";
+
+import { useCoinData } from "@/hooks/useCoinData";
+import CoinBox from "../common/CoinBox/CoinBox";
 
 const MarketTable = () => {
-  const [data, setData] = useState([]);
+  const { data } = useCoinData();
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getData();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const btc = data?.find((coin) => coin.id === "bitcoin");
   const eth = data?.find((coin) => coin.id === "ethereum");

@@ -12,35 +12,27 @@ import {
   Menu, 
   MenuItem 
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+
 import { Canvas } from "@react-three/fiber";
 import { motion, AnimatePresence } from "framer-motion";
 import ETH from "../ETH/ETH";
-import CoinBox from '../CoinBox/CoinBox';
-import { getData } from '@/utils/getData';
+import CoinBox from '../common/CoinBox/CoinBox';
+import { useCoinData } from '@/hooks/useCoinData';
 
 const HeroInner = () => {
-  const [data, setData] = useState([]);
+  const { data } = useCoinData();
   const [view, setView] = useState('home');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    async function fetchData() {
-      const result = await getData();
-      setData(result);
-    }
-    fetchData();
-    
   }, []);
 
   const btcData = data?.find(coin => coin.id === 'bitcoin');
   const ethData = data?.find(coin => coin.id === 'ethereum');
   const solData = data?.find(coin => coin.id === 'solana');
 
-  const [auth, setAuth] = useState(true);
-  const [anchorEl, setAnchorEl] = useState(null);
+
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
