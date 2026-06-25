@@ -9,8 +9,8 @@ const cards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Instant Booking',
-    desc: 'Secure shelter reservations, guide bookings, and park entries with a single tap.',
+    title: 'Instant Trading',
+    desc: 'Buy, sell, and swap cryptocurrencies instantly with real-time execution and deep liquidity.',
   },
   {
     icon: (
@@ -18,8 +18,8 @@ const cards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
       </svg>
     ),
-    title: 'Offline Payments',
-    desc: 'Store digital passes and complete offline-verified transactions without cell reception.',
+    title: 'Secure Wallet',
+    desc: 'Store your digital assets with bank-grade encryption, cold storage, and multi-factor authentication.',
   },
   {
     icon: (
@@ -27,8 +27,8 @@ const cards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
       </svg>
     ),
-    title: 'Stay in Touch',
-    desc: 'Share live locations with trail friends and send distress alerts without active network signals.',
+    title: 'Market Alerts',
+    desc: 'Get real-time price notifications and personalized market insights directly on your phone.',
   },
 ];
 
@@ -52,10 +52,10 @@ function MobileApp() {
                 Mobile Experience
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
-                Manage your wallet from anywhare you want
+                Manage your wallet from anywhere you want
               </h2>
               <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl">
-                Get full access to offline routing, real-time safety acees to your crypto. Take the best .
+                Get full access to your crypto portfolio, real-time market data, and secure transactions on the go.
               </p>
 
               {/* CARDS BOX */}
@@ -148,94 +148,127 @@ function MobileApp() {
                   {/* App Header */}
                   <div className="px-4 py-2 border-b border-slate-800 flex justify-between items-center bg-slate-900/80 backdrop-blur-md sticky top-0 z-10">
                     <div>
-                      <p className="text-[9px] text-slate-400 uppercase tracking-widest leading-none">ACTIVE TRAIL</p>
-                      <h4 className="text-xs font-bold mt-0.5">High Tatras Valley</h4>
+                      <p className="text-[9px] text-slate-400 uppercase tracking-widest leading-none">PORTFOLIO</p>
+                      <h4 className="text-xs font-bold mt-0.5">Total Balance</h4>
                     </div>
                     <span className="text-[10px] bg-sky-500/20 text-sky-400 border border-sky-500/30 px-2 py-0.5 rounded-full font-semibold">
                       Live
                     </span>
                   </div>
 
-                  {/* Topographic Map Canvas Mock */}
-                  <div className="flex-1 relative bg-slate-950 flex flex-col justify-center items-center p-4">
-                    {/* Topo Curves */}
-                    <svg className="absolute inset-0 w-full h-full stroke-slate-800/40" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <path d="M-10,20 Q30,10 50,40 T110,30" strokeWidth="0.5" />
-                      <path d="M-10,40 Q40,30 60,60 T110,50" strokeWidth="0.5" />
-                      <path d="M-10,60 Q30,50 70,80 T110,70" strokeWidth="0.5" />
-                      <path d="M-10,80 Q50,70 80,95 T110,90" strokeWidth="0.5" />
+                  {/* Candlestick Chart */}
+                  <div className="flex-1 relative bg-slate-950 flex flex-col p-3">
+                    {/* Chart SVG */}
+                    <svg className="w-full h-full" viewBox="0 0 220 160" preserveAspectRatio="xMidYMid meet">
+                      {/* Grid lines */}
+                      <line x1="30" y1="20" x2="210" y2="20" stroke="#1e293b" strokeWidth="0.5" />
+                      <line x1="30" y1="55" x2="210" y2="55" stroke="#1e293b" strokeWidth="0.5" />
+                      <line x1="30" y1="90" x2="210" y2="90" stroke="#1e293b" strokeWidth="0.5" />
+                      <line x1="30" y1="125" x2="210" y2="125" stroke="#1e293b" strokeWidth="0.5" />
+
+                      {/* Y-axis labels */}
+                      <text x="28" y="16" fill="#64748b" fontSize="6" textAnchor="end">48.2K</text>
+                      <text x="28" y="51" fill="#64748b" fontSize="6" textAnchor="end">47.8K</text>
+                      <text x="28" y="86" fill="#64748b" fontSize="6" textAnchor="end">47.4K</text>
+                      <text x="28" y="121" fill="#64748b" fontSize="6" textAnchor="end">47.0K</text>
+
+                      {/* Volume bars at bottom */}
+                      <rect x="38" y="134" width="10" height="16" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="50" y="140" width="10" height="10" fill="#ef4444" opacity="0.2" rx="1" />
+                      <rect x="62" y="130" width="10" height="20" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="74" y="136" width="10" height="14" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="86" y="142" width="10" height="8" fill="#ef4444" opacity="0.2" rx="1" />
+                      <rect x="98" y="128" width="10" height="22" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="110" y="138" width="10" height="12" fill="#ef4444" opacity="0.2" rx="1" />
+                      <rect x="122" y="126" width="10" height="24" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="134" y="132" width="10" height="18" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="146" y="140" width="10" height="10" fill="#ef4444" opacity="0.2" rx="1" />
+                      <rect x="158" y="124" width="10" height="26" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="170" y="134" width="10" height="16" fill="#22c55e" opacity="0.2" rx="1" />
+                      <rect x="182" y="144" width="10" height="6" fill="#ef4444" opacity="0.2" rx="1" />
+                      <rect x="194" y="130" width="10" height="20" fill="#22c55e" opacity="0.2" rx="1" />
+
+                      {/* Candlesticks */}
+                      {/* C1: up */}
+                      <line x1="43" y1="65" x2="43" y2="28" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="38" y="40" width="10" height="20" fill="#22c55e" rx="1" />
+
+                      {/* C2: down */}
+                      <line x1="55" y1="50" x2="55" y2="75" stroke="#ef4444" strokeWidth="1.5" />
+                      <rect x="50" y="52" width="10" height="18" fill="#ef4444" rx="1" />
+
+                      {/* C3: up */}
+                      <line x1="67" y1="55" x2="67" y2="22" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="62" y="28" width="10" height="22" fill="#22c55e" rx="1" />
+
+                      {/* C4: up */}
+                      <line x1="79" y1="48" x2="79" y2="25" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="74" y="30" width="10" height="14" fill="#22c55e" rx="1" />
+
+                      {/* C5: down */}
+                      <line x1="91" y1="42" x2="91" y2="68" stroke="#ef4444" strokeWidth="1.5" />
+                      <rect x="86" y="46" width="10" height="16" fill="#ef4444" rx="1" />
+
+                      {/* C6: up */}
+                      <line x1="103" y1="52" x2="103" y2="20" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="98" y="24" width="10" height="22" fill="#22c55e" rx="1" />
+
+                      {/* C7: down */}
+                      <line x1="115" y1="38" x2="115" y2="65" stroke="#ef4444" strokeWidth="1.5" />
+                      <rect x="110" y="42" width="10" height="18" fill="#ef4444" rx="1" />
+
+                      {/* C8: up */}
+                      <line x1="127" y1="50" x2="127" y2="16" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="122" y="20" width="10" height="24" fill="#22c55e" rx="1" />
+
+                      {/* C9: up */}
+                      <line x1="139" y1="42" x2="139" y2="20" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="134" y="26" width="10" height="12" fill="#22c55e" rx="1" />
+
+                      {/* C10: down */}
+                      <line x1="151" y1="35" x2="151" y2="64" stroke="#ef4444" strokeWidth="1.5" />
+                      <rect x="146" y="38" width="10" height="20" fill="#ef4444" rx="1" />
+
+                      {/* C11: up */}
+                      <line x1="163" y1="48" x2="163" y2="14" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="158" y="18" width="10" height="24" fill="#22c55e" rx="1" />
+
+                      {/* C12: up */}
+                      <line x1="175" y1="40" x2="175" y2="18" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="170" y="22" width="10" height="14" fill="#22c55e" rx="1" />
+
+                      {/* C13: down */}
+                      <line x1="187" y1="48" x2="187" y2="72" stroke="#ef4444" strokeWidth="1.5" />
+                      <rect x="182" y="50" width="10" height="18" fill="#ef4444" rx="1" />
+
+                      {/* C14: up */}
+                      <line x1="199" y1="48" x2="199" y2="22" stroke="#22c55e" strokeWidth="1.5" />
+                      <rect x="194" y="28" width="10" height="16" fill="#22c55e" rx="1" />
                     </svg>
-
-                    {/* Active Track Path */}
-                    <svg className="absolute inset-0 w-full h-full stroke-emerald-400" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <path d="M 20 80 C 35 70, 30 50, 45 40 C 60 30, 55 20, 80 15" strokeWidth="2" strokeDasharray="3,3" />
-                    </svg>
-
-                    {/* Hiker marker (Current User) */}
-                    <div className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 z-10">
-                      <span className="flex h-4 w-4 relative">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white shadow-md"></span>
-                      </span>
-                    </div>
-
-                    {/* Mountain Friend Marker */}
-                    <div className="absolute top-[18%] left-[78%] -translate-x-1/2 -translate-y-1/2 z-10 group">
-                      <div className="relative h-6 w-6 rounded-full border-2 border-sky-400 overflow-hidden bg-slate-700 shadow-md">
-                        {/* Mock avatar */}
-                        <div className="text-[8px] flex items-center justify-center h-full font-bold bg-sky-900 text-sky-200">
-                          JD
-                        </div>
-                      </div>
-                      <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-slate-900/90 text-[7px] px-1 py-0.5 rounded border border-slate-700 text-white whitespace-nowrap">
-                        Jan
-                      </span>
-                    </div>
 
                     {/* Mini Stats HUD overlay */}
                     <div className="absolute top-4 left-4 right-4 bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-xl p-2.5 flex justify-between shadow-lg">
                       <div className="text-center flex-1 border-r border-slate-800">
-                        <p className="text-[8px] text-slate-400">Altitude</p>
-                        <p className="text-xs font-bold mt-0.5 text-sky-400">1,842 m</p>
+                        <p className="text-[8px] text-slate-400">BTC</p>
+                        <p className="text-xs font-bold mt-0.5 text-sky-400">$42,580</p>
                       </div>
                       <div className="text-center flex-1 border-r border-slate-800">
-                        <p className="text-[8px] text-slate-400">Distance</p>
-                        <p className="text-xs font-bold mt-0.5 text-sky-400">4.2 km</p>
+                        <p className="text-[8px] text-slate-400">ETH</p>
+                        <p className="text-xs font-bold mt-0.5 text-sky-400">$2,310</p>
                       </div>
                       <div className="text-center flex-1">
-                        <p className="text-[8px] text-slate-400">ETA</p>
-                        <p className="text-xs font-bold mt-0.5 text-sky-400">1h 15m</p>
+                        <p className="text-[8px] text-slate-400">SOL</p>
+                        <p className="text-xs font-bold mt-0.5 text-sky-400">$145</p>
                       </div>
                     </div>
 
-                    {/* Floating Shelter Card */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-slate-900/95 border border-slate-800 rounded-xl p-3 shadow-xl flex items-center gap-3">
-                      <div className="h-9 w-9 rounded-lg bg-sky-950 border border-sky-900 flex items-center justify-center shrink-0">
-                        <svg className="w-5 h-5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h5 className="text-[10px] font-bold truncate">Murowaniec Shelter</h5>
-                        <p className="text-[8px] text-slate-400 truncate">Reservations secured for today</p>
-                      </div>
-                      <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                    </div>
+                 
                   </div>
 
-                  {/* Safety Alert bottom HUD */}
-                  <div className="px-4 py-3 bg-indigo-950/60 border-t border-indigo-900/50 backdrop-blur-md flex justify-between items-center text-[9px]">
-                    <span className="text-indigo-300 font-semibold flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-                      Live group connection active
-                    </span>
-                    <button className="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 px-2 py-0.5 rounded font-bold cursor-pointer transition">
-                      SOS
-                    </button>
-                  </div>
+            
 
                   {/* Safe Area Indicator */}
-                  <div className="w-20 h-1 bg-slate-800 rounded-full mx-auto my-1.5 shrink-0" />
+                  <div className="w-20 h-1 bg-slate-800 rounded-full mx-auto my-1.5 shrink-0 animate-float transition" />
                 </div>
               </div>
             </div>
