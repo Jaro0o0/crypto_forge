@@ -95,7 +95,7 @@ function Footer() {
                 whileHover={{ scale: 1.15, y: -3 }}
                 className="flex justify-center items-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-white/10 p-2.5 rounded-full backdrop-blur-sm cursor-pointer hover:border-cyan-500/50 transition-colors"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox={icon.viewBox}>
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox={icon.viewBox}>
                   <path d={icon.d} />
                 </svg>
               </motion.div>

@@ -84,9 +84,9 @@ const WhyChooseUs = () => {
           </Box>
 
           {/* 3D Model Box */}
-          <Box className="relative flex justify-center items-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-1 lg:order-2">
-            <Box className="absolute w-[80%] h-[80%] bg-purple-500/20 blur-[60px] md:blur-[100px] rounded-full animate-pulse" />
-            <Box className="w-full h-full z-10">
+          <Box className="relative h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] order-1 lg:order-2">
+            <Box className="absolute w-[80%] h-[80%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500/20 blur-[60px] md:blur-[100px] rounded-full animate-pulse" />
+            <Box className="absolute inset-0 z-10">
               {mounted && (
                 <Canvas camera={{ position: [0, 0, 7], fov: 90 }}>
                   <ETH />

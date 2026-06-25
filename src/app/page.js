@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <Section id="Home" className="w-full min-h-screen flex items-center py-20 md:py-0">
+      <Section id="Home" className="w-full min-h-screen flex items-start md:items-center py-20 md:py-0">
         <Hero/>
       </Section>
 

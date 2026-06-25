@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box } from "@mui/material";
 
 import dynamic from 'next/dynamic';
@@ -10,6 +10,8 @@ import NavBar from './NavBar/NavBar';
 import HomeView from './Views/HomeView';
 import NewsView from './Views/NewsView';
 import PopularView from './Views/PopularView';
+
+const ThreeScene = dynamic(() => import('./ThreeScene/ThreeScene'), { ssr: false })
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -21,11 +23,12 @@ const containerVariants = {
 };
 
 
-const ThreeScene = dynamic(() => import('./ThreeScene/ThreeScene'), { ssr: false })
 
 
 const HeroInner = ({ btcData, ethData, solData }) => {
   const [view, setView] = useState('home');
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
     <Box className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -58,7 +61,7 @@ const HeroInner = ({ btcData, ethData, solData }) => {
       </motion.div>
 
       {/* 3D SCENE */}
-      <ThreeScene />
+      {mounted && <ThreeScene />}
      
     </Box>
   );
