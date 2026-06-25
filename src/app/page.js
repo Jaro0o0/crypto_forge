@@ -1,7 +1,7 @@
 "use client" 
 
 
-import HeroInner from "../components/HeroInner/HeroInner";
+import Hero from "../components/Hero/Hero";
 import CryptoPricesTable from "@/components/CryptoPricesTable/CryptoPricesTable";
 import JoinUs from "../components/JoinUs/JoinUs";
 import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
@@ -13,7 +13,7 @@ import MobileApp from "../components/MobileApp/MobileApp";
 export default function Home() {
   return (
       <>
-        <HeroInner/>
+        <Hero/>
         
         {/* Table Section */}
         <CryptoPricesTable/>
