@@ -16,6 +16,8 @@ const stats = [
   { value: "99.9%", label: "Uptime" },
 ];
 
+
+
 const AboutUs = () => {
   return (
     <Box className="flex flex-col items-center w-full flex-1">
