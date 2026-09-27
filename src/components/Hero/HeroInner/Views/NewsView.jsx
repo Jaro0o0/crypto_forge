@@ -20,7 +20,7 @@ const NewsView = () => (
   >
     <Typography
       variant="h3"
-      className="font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"
+      className="font-bold !mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"
       sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}
     >
       Market Insights

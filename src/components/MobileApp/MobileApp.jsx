@@ -115,13 +115,13 @@ function MobileApp() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                    className="flex flex-col gap-3 p-5 rounded-2xl border border-slate-800/80 bg-slate-900/50 hover:bg-slate-900/85 hover:border-slate-700/50 transition duration-300 group shadow-md"
+                    className="flex flex-col gap-3 p-5 rounded-2xl border border-slate-800/80 bg-slate-900/50 hover:bg-slate-900/85 hover:border-slate-700/50  group shadow-md"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-950/60 border border-cyan-800/30 group-hover:scale-110 transition duration-300">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-950/60 border border-cyan-800/30 group-hover:scale-110 ">
                       {card.icon}
                     </div>
                     <div>
-                      <h3 className="text-base font-semibold text-white group-hover:text-cyan-300 transition duration-300">
+                      <h3 className="text-base font-semibold text-white group-hover:text-cyan-300">
                         {card.title}
                       </h3>
                       <p className="mt-1.5 text-xs leading-normal text-slate-400">

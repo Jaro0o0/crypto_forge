@@ -4,7 +4,7 @@ function CoinBox({children, onClick}) {
     return ( 
         <Box 
             onClick={onClick}
-            className="p-4 rounded-xl flex-1 cursor-pointer transition-all duration-300"  
+            className="p-4 rounded-xl flex-1 cursor-pointer "  
             sx={{ 
                 flexGrow: 1, 
                 backgroundColor: 'rgba(255, 255, 255, 0.02)', 
